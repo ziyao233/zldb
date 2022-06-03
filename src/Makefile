@@ -13,6 +13,8 @@ REMOVE		:= rm
 
 # Files
 SRC		:= zldb.lua
+DEPENDENCY	:= ../dep/i18n.lua
+LANG		:= -r ../lang/en.lua
 OUTPUT_SCRIPT	:= zldb
 
 # Directories
@@ -21,7 +23,7 @@ DIR_INSTALL	:= ${HOME}/.local/bin
 default: build
 
 build: $(SRC)
-	$(LMERGE) $(SRC) -m zldb.lua -ishb -o $(OUTPUT_SCRIPT)
+	$(LMERGE) $(SRC) $(DEPENDENCY) -m zldb.lua -ishb -o $(OUTPUT_SCRIPT) $(LANG)
 	$(CHMOD) 777 $(OUTPUT_SCRIPT)
 
 install: build
