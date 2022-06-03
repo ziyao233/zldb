@@ -7,6 +7,15 @@
 	Copyright (c) 2022 Ziyao.All rights reserved.
 ]]
 
-local		io		= require("io");
+local io		= require("io");
 
-print("Hello World");
+local modConf		= require("Conf");
+local modLang		= require("Lang");
+
+local gzldb = {
+			conf = modConf.load(),
+	      };
+
+modLang.init(gzldb.conf.lang);
+
+print(modLang.translate("Hello"));
