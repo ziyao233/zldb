@@ -1,5 +1,5 @@
 return {
 	C = {
-		[ [[Hello]] ] = [[Hello World]],
+		[ [[Hello]] ] = [[#{gr}Hello World#{cf}]],
 	    },
        };
