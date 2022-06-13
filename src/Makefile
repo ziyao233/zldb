@@ -12,7 +12,7 @@ CHMOD		:= chmod
 REMOVE		:= rm
 
 # Files
-SRC		:= zldb.lua
+SRC		:= zldb.lua Conf.lua Terminal.lua Lang.lua
 DEPENDENCY	:= ../dep/i18n.lua
 LANG		:= -r ../lang/translation.lua
 OUTPUT_SCRIPT	:= zldb
